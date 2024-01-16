@@ -1,4 +1,5 @@
 # Portfolio Webpage 👋
+=======
 
 ## Welcome!
 
@@ -14,7 +15,7 @@ Feel free to explore, and check back for updates!
 
 ---
 
-## Technologies Used
+## Technologies Used :star:
 
 - HTML5
 - CSS3
@@ -22,7 +23,7 @@ Feel free to explore, and check back for updates!
 
 ---
 
-## Getting Started
+## Getting Started :floppy_disk:
 
 To view the portfolio webpage, visit [https://3le81.github.io/portfolio-elena-2024/](#) in your web browser.
 
