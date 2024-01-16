@@ -1,6 +1,6 @@
 # Portfolio Webpage
 
-## Welcome!
+## Welcome! :smiley:
 
 "Thanks for visiting my web playground! I'm a beginner web developer tinkering with HTML, JavaScript, and CSS. Join me on this coding adventure as I share my projects and discoveries."
 
