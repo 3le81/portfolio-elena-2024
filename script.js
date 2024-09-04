@@ -4,7 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector("nav");
 
     menuToggle.addEventListener("click", function () {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        // Toggle 'aria-expanded' attribute
+        menuToggle.setAttribute("aria-expanded", !isExpanded);
+        // Toggle navigation visibility
         nav.classList.toggle("collapsed");
+        // Toggle menu button active state
         menuToggle.classList.toggle("active");
     });
 });
