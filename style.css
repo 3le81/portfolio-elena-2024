@@ -8,84 +8,71 @@ body {
     min-height: 100vh;
 }
 
-/* Skip Link */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #682050;
-    color: white;
-    padding: 8px;
-    z-index: 1000;
-    transition: top 0.3s;
-}
-
-.skip-link:focus {
-    top: 0;
-}
-
-/* Header Styles */
 header {
     background-color: #fcd6d9;
     color: #333;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header h1 {
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 0;
     color: #682050;
+    text-align: center;
 }
 
 header h2 {
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.6em;
     color: #682050;
-    margin: 10px 0 0;
+    border-bottom: 2px solid #fcd6d9;
+    padding-bottom: 5px;
+    margin: 15px 0;
+    text-align: center;
 }
 
-/* Navigation Styles */
-.navbar {
+nav {
     background-color: #f7f7f7;
     padding: 10px;
+    position: relative;
 }
 
-.navbar ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
 }
 
-.navbar li {
-    display: inline-block;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-.navbar a {
+nav a {
     text-decoration: none;
     color: #333;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
-.navbar a:hover {
+nav a:hover {
     color: #ff66a2;
 }
 
-/* Responsive Navigation */
+/* Toggle button styles */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 8px;
     position: absolute;
-    top: 1em;
-    right: 1em;
+    top: 10px;
+    right: 10px;
     z-index: 1000;
 }
 
@@ -96,15 +83,15 @@ header h2 {
 
 .menu-toggle .bar {
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 20px;
+    height: 2px;
     background-color: #682050;
-    margin: 5px 0;
+    margin: 4px 0;
     transition: 0.4s;
 }
 
 .menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-3px, 4px);
 }
 
 .menu-toggle.active .bar:nth-child(2) {
@@ -112,125 +99,141 @@ header h2 {
 }
 
 .menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-3px, -4px);
 }
 
-/* Main Content Styles */
 main {
     flex: 1;
     padding: 1.25rem;
 }
 
-/* Project Grid */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
 }
 
 .project {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     text-align: center;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .project img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    max-height: 400px;
+    max-width: 300px;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 .project h3 {
-    margin: 10px 0;
-    color: #682050;
-}
-
-.project p {
-    color: #666;
+    margin-top: 0.625rem;
 }
 
 .project a {
     text-decoration: none;
-    color: inherit;
+    color: #333;
 }
 
 .project a:hover {
     color: #ff66a2;
 }
 
-/* Responsive Project Grid */
-@media screen and (max-width: 600px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar li {
-        margin-bottom: 10px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .navbar ul {
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul {
         display: none;
         width: 100%;
+        text-align: center;
+        background-color: #f7f7f7;
     }
 
     nav.collapsed ul {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        margin: 5px 0;
+        color: #333;
+    }
+
+    .menu-toggle {
+        display: block;
+        padding: 8px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .menu-toggle .bar {
+        width: 20px;
+        height: 2px;
+        margin: 4px 0;
     }
 }
 
-/* Footer Styles */
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
 footer {
     background-color: #fcd6d9;
     color: #333;
-    padding: 15px;
+    text-align: left;
+    padding: 10px;
     margin-top: auto;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+footer .top-link {
+    float: right;
 }
 
-.footer-content .copyright {
-    text-align: left;
+footer .copyright {
+    display: inline-block;
 }
 
-.footer-content .top-link {
-    text-align: right;
-}
-
-footer a {
+article>a {
     text-decoration: none;
+    transition: 0.4s;
     color: #682050;
-    transition: color 0.3s ease;
 }
 
-footer a:hover {
+article>a:hover {
     color: #ff66a2;
 }
 
-/* Ensuring Focus Visibility */
-a:focus, button:focus {
-    outline: 3px solid #ff66a2;
-    outline-offset: 2px;
+/* Skip Link Styles */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    z-index: 1000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: top 0.3s ease;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.skip-link:focus {
+    top: 10px;
 }
