@@ -6,26 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
-    <title>Elena Pagano Portfolio</title>
-    <script src="script.js"></script>
+    <title>Elena Pagano - Web & Software Developer</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <header>
-        <!-- <div class="logo">
-            <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="25" style="fill:#682050; stroke:#b1788f"></circle>
-                <text x="38" y="55" fill="pink" stroke="#ff66a2" font-size="15">Elle</text>
-            </svg>
-        </div> -->
-
-
-
-        <h1>elena pagano</h1>
-        <h2>my portfolio</h2>
+        <h1>Elena Pagano</h1>
+        <h2>Web & Software Developer</h2>
     </header>
-    <nav class="navbar">
-        <button class="menu-toggle" aria-label="Toggle navigation">
+
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -37,41 +32,42 @@
             <li><a href="https://www.linkedin.com/in/elena-pagano-24000075/" target="_blank">Contact</a></li>
         </ul>
     </nav>
-    <main>
-        <!-- Grid container for project photos -->
-        <div class="project-grid">
 
+    <main id="main-content">
+        <div class="project-grid">
             <div class="project">
                 <a href="https://github.com/3le81/foundersandcoders-hobby_page" target="_blank">
-                    <img src="./images/kitchen-blog.png" width="300" height="200" alt="Kitchen Blog">
+                    <img src="./images/kitchen-blog.png" alt="Italian Goods Kitchen Blog">
                     <h3>Italian Goods</h3>
+                    <p>Kitchen Blog Project</p>
                 </a>
-                <p>Kitchen Blog Project</p>
             </div>
 
             <div class="project">
                 <a href="https://github.com/3le81/climate_change_colours_project" target="_blank">
-                    <img src="./images/climate_change_1880-2022.png" width="300" height="200" alt="Climate Change Data">
+                    <img src="./images/climate_change_1880-2022.png" alt="Climate Change Data">
                     <h3>Climate Change Data</h3>
+                    <p>Workshop in Python</p>
                 </a>
-                <p>Workshop in Python</p>
             </div>
 
             <div class="project">
                 <a href="https://fac30.github.io/agency-site--oleg-elena/index.html" target="_blank">
-                    <img src="./images/pet-therapy-one.png" width="300" height="200" alt="Pet Therapy One Agency">
+                    <img src="./images/pet-therapy-one.png" alt="Pet Therapy One Agency">
                     <h3>Pet Therapy One</h3>
+                    <p>Web Development Workshop</p>
                 </a>
-                <p>Web Development Workshop</p>
             </div>
         </div>
     </main>
+
     <footer>
-        <div class="copyright">&copy;2024 created by <a href="https://github.com/3le81" target="_blank">Elena Pagano</a>
-        </div>
-        <article class="span2">
+        <div class="footer-content">
+            <div class="copyright">
+                &copy; 2024 created by <a href="https://github.com/3le81" target="_blank">Elena Pagano</a>
+            </div>
             <a href="#top" class="top-link">Back to top ▲</a>
-        </article>
+        </div>
     </footer>
 </body>
 
